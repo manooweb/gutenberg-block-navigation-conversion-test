@@ -1,0 +1,40 @@
+{
+  "name": "gutenberg-core-html-block-attribute-widget-test",
+  "version": "3.1.0",
+  "description": "Adds multilingual capability to WordPress",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@wordpress/babel-preset-default": "^6.3.2",
+    "babel-loader": "^8.2.2",
+    "glob": "^7.1.7",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.2.4",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "scripts": {
+    "build": "npm run clean && webpack --mode production",
+    "build:dev": "npm run clean && webpack --mode development",
+    "dev": "npm run clean && webpack --mode development --watch",
+    "clean": "rimraf dist/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://manooweb@github.com/polylang/polylang-pro.git"
+  },
+  "keywords": [
+    "gutenberg",
+    "block",
+    "core/html"
+  ],
+  "author": "WP Syntex",
+  "license": "GPL-3.0+",
+  "bugs": {
+    "url": "https://github.com/polylang/polylang-pro/issues"
+  },
+  "homepage": "https://github.com/polylang/polylang-pro#readme",
+  "resolutions": {}
+}
