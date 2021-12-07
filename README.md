@@ -7,7 +7,7 @@ This an example of a custom menu item (Language switcher) that needs to be conve
 It is a base to test the issue in the Gutenberg project.
 
 ## Requirements
-- Polylang plugin
+- [Polylang plugin](https://wordpress.org/plugins/polylang/) 3.1.2 (latest version)
 - WordPress 5.8.2 or later
 - Gutenberg 12.0.x or later
 - A classic WordPress theme like Twenty Twenty-one
