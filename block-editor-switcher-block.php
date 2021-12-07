@@ -53,7 +53,7 @@ class PLL_Block_Editor_Switcher_Block {
 		// Register language switcher block.
 		add_action( 'init', array( $this, 'register_block_polylang_language_switcher' ) );
 
-		// add_action( 'rest_api_init', array( $this, 'register_switcher_menu_item_options_meta_rest_field' ) );
+		add_action( 'rest_api_init', array( $this, 'register_switcher_menu_item_options_meta_rest_field' ) );
 
 		add_filter( 'widget_types_to_hide_from_legacy_widget_block', array( $this, 'hide_legacy_widget' ) );
 	}
