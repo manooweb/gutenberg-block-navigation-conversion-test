@@ -324,7 +324,7 @@ class PLL_Block_Editor_Switcher_Block {
 					'schema' => array(
 						'type' => 'object',
 						'additionalProperties' => array(
-							'type' => 'integer',
+							'type' => 'boolean',
 						),
 					)
 				),
