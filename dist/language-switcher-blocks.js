@@ -694,9 +694,12 @@ function mapBlockTree(blocks, menuItems, blocksMapping, mapper) {
         url: '#pll_switcher'
       }); // Get the corresponding menu item.
 
-      const attributes = menuItem.meta._pll_menu_item; // Get its options.
+      const attributes = Object.assign({}, menuItem.meta._pll_menu_item); // Get its options.
 
-      const newBlock = (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlock)(navigationLanguageSwitcherName, attributes);
+      const newBlock = (0,_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__.createBlock)(navigationLanguageSwitcherName, Object.fromEntries(Object.entries(attributes).map(_ref => {
+        let [attributeName, attributeValue] = _ref;
+        return [attributeName, !!attributeValue];
+      })));
       blocksMapping[menuItem.id] = newBlock.clientId;
       return newBlock;
     }
