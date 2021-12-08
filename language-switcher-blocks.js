@@ -154,8 +154,8 @@ addFilter(
 				( block, menuItems, blocksMapping ) => {
 					if( block.name === "core/navigation-link" && block.attributes?.url === "#pll_switcher" ) {
 						const menuItem = find( menuItems, { url: '#pll_switcher' } ); // Get the corresponding menu item.
-						const attributes = Object.assign( {}, menuItem.meta._pll_menu_item ); // Get its options.
-						const newBlock = createBlock( navigationLanguageSwitcherName, Object.fromEntries( Object.entries( attributes).map( ( [ attributeName, attributeValue ] ) => [ attributeName, !! attributeValue ] ) ) );
+						const attributes = menuItem.meta._pll_menu_item; // Get its options.
+						const newBlock = createBlock( navigationLanguageSwitcherName, attributes );
 						blocksMapping[ menuItem.id ] = newBlock.clientId;
 						return newBlock;
 					}
